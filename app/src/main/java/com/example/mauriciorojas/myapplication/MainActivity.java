@@ -22,19 +22,12 @@ import android.os.Handler;
 public class MainActivity extends ActionBarActivity implements BackgroundResultReceiver.Receiver {
 
 
-    private TextView batteryTxt;
-    private BroadcastReceiver mBatInfoReceiver = new BroadcastReceiver(){
-        @Override
-        public void onReceive(Context ctxt, Intent intent) {
-            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
-            batteryTxt.setText(String.valueOf(level) + "%");
-        }
-    };
-
-
     private BackgroundResultReceiver mReceiver;
     TextView msg1;
     TextView msg2;
+    TextView batteryTxt;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

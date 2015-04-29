@@ -48,6 +48,7 @@ public class BackgroundIntent extends IntentService {
         }
     }
 
+    //Generacion del arreglo
     static final int MAX_VALUE = 100000;
     int data[] = new int[MAX_VALUE];
 
@@ -76,7 +77,8 @@ public class BackgroundIntent extends IntentService {
 
             long start = System.nanoTime();
             generarNuevoArreglo();
-            bubbleSort();
+            //Ejecucion del algoritmo de ordenamiento
+            bubbleSort(); //Cambiar por el algoritmo de cada uno
             long end = System.nanoTime();
 
             long elapsedTime = end - start;
